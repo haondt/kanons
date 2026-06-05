@@ -6,4 +6,4 @@ kanons:
   - self::python/testing/pytest
   - self::python/models/pydantic
   - self::build/just
-  - self::python/config-lazy
+  - self::python/config[lazy]

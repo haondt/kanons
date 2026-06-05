@@ -20,18 +20,24 @@ from functools import cached_property
 from datetime import timedelta
 
 class Config:
-    def __init__(self):
-        # Required — fail fast if absent
-        self.database_url: str = os.environ["KN_DATABASE_URL"]
+    # Required — fail if absent
+    @cached_property
+    def database_url(self) -> str:
+        return os.environ["KN_DATABASE_URL"]
 
-        # Optional with default
-        self.is_development: bool = os.getenv("KN_ENVIRONMENT", "production").lower() in ("dev", "development")
+    # Optional with default
+    @cached_property
+    def is_development(self) -> bool:
+        return os.getenv("KN_ENVIRONMENT", "production").lower() in ("dev", "development")
 
-        # Expose complex types
-        self.timeout: timedelta = timedelta(seconds=float(os.getenv("KN_TIMEOUT_SECONDS", "30")))
+    # Expose complex types
+    @cached_property
+    def timeout(self) -> timedelta:
+        return timedelta(seconds=float(os.getenv("KN_TIMEOUT_SECONDS", "30")))
 
 config = Config()
 ```
+- Use `cached_property` to load all config lazily.
 - Prefix all env vars with a short key distinct to the app.
 - Read and parse all values in `__init__`; store as typed attributes — the rest of the codebase works with `int`, `timedelta`, etc., never raw strings
 - Use `os.environ[KEY]` (raises `KeyError`) for required values; use `os.getenv(KEY, default)` for optional ones

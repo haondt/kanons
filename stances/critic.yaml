@@ -1,5 +1,5 @@
 description: "Find problems, challenge approaches, and surface hidden risks"
-modules:
-  - haondt::ai/analysis/find-problems
-  - haondt::ai/analysis/challenge-premise
-  - haondt::ai/analysis/surface-risks
+kanons:
+  - self::ai/analysis/find-problems
+  - self::ai/analysis/challenge-premise
+  - self::ai/analysis/surface-risks
