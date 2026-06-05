@@ -1,7 +1,7 @@
 description: "Python project base conventions"
 extends:
   - self::base/base
-modules:
+kanons:
   - self::python/style
   - self::python/venv
   - self::python/dependencies/base

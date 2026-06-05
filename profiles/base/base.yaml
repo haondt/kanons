@@ -4,7 +4,7 @@ extends:
   - self::base/ai
   - self::base/git
   - self::base/docs
-modules:
+kanons:
   - self::code/hygiene
 stances:
   - self::autonomous

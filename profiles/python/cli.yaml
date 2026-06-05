@@ -1,8 +1,9 @@
 description: "Python CLI tool"
 extends:
   - self::python/base
-modules:
+kanons:
   - self::python/dependencies/uv
   - self::python/testing/pytest
   - self::python/models/pydantic
   - self::build/just
+  - self::python/config-lazy

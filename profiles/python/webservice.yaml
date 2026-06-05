@@ -1,7 +1,7 @@
 description: "Python web service or API"
 extends:
   - self::python/base
-modules:
+kanons:
   - self::python/async
   - self::config/base
   - self::python/config

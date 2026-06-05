@@ -1,5 +1,5 @@
 description: "Git conventions"
-modules:
+kanons:
   - self::git/commit-base
   - self::git/commit-long
   - self::git/branch-base

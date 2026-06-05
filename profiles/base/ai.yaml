@@ -1,5 +1,5 @@
 description: "AI assistant behavioral conventions and stances"
-modules:
+kanons:
   - self::ai/communication/prefer-brevity
   - self::ai/coding/verify-before-use
   - self::ai/coding/prefer-reuse
