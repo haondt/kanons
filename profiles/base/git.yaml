@@ -1,5 +1,5 @@
 description: "Git conventions"
 kanons:
   - self::git/commit-base
-  - self::git/commit-long
+  - self::git/commit-short
   - self::git/branch-base
