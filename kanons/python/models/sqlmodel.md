@@ -5,6 +5,7 @@ kanon:
 
 # SQLModel
 
+- On Python 3.14 use SQLModel 0.0.38 or later; 0.0.22 fails with `Field 'id' requires a type annotation`
 - Use separate classes for table models and API schemas when they diverge — do not reuse a table model directly as a response body
 - Use `Field(foreign_key=...)` for relationships; define `Relationship()` explicitly rather than relying on implicit joins
 - Use `select()` for queries — prefer SQLModel's typed query builder over raw SQL strings

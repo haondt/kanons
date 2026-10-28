@@ -1,7 +1,9 @@
 description: "AI assistant behavioral conventions and stances"
 kanons:
   - self::ai/communication/prefer-brevity
+  - self::ai/safety/processes
   - self::ai/coding/verify-before-use
   - self::ai/coding/prefer-reuse
   - self::ai/style/stay-in-scope
+  - self::ai/style/shared-workspace
   - self::ai/style/confirm-before-acting

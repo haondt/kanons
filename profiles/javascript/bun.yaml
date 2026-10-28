@@ -1,0 +1,5 @@
+description: "Bun project base conventions"
+extends:
+  - self::base/base
+kanons:
+  - self::javascript/bun

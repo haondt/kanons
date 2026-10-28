@@ -1,3 +1,5 @@
 description: "Documentation conventions"
 kanons:
   - self::docs/readme
+  - self::docs/lean-content
+  - self::docs/style

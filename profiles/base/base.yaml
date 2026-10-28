@@ -6,6 +6,7 @@ extends:
   - self::base/docs
 kanons:
   - self::code/hygiene
+  - self::code/refactoring
 stances:
   - self::autonomous
   - self::collaborative
